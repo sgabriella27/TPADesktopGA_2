@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using System.Data;
+using TPADestop_GA20_2_.Facade;
 
 namespace TPADestop_GA20_2_
 {
@@ -25,10 +26,12 @@ namespace TPADestop_GA20_2_
     {
         string employeeEmail;
         string employeePassword;
+        private windowOpener windowOpen;
 
         public MainWindow()
         {
             InitializeComponent();
+            windowOpen = new windowOpener();
         }
 
         public string EmployeeEmail { get => employeeEmail; set => employeeEmail = value; }
@@ -55,12 +58,8 @@ namespace TPADestop_GA20_2_
 
             DataRow dataRow = dataTable.Rows[0];
 
-            if (dataRow["EmployeeRole"].ToString().Equals("teller"))
-            {
-                Window tellerWindow = new TellerWindow(new Employee(dataRow["EmployeeID"].ToString(), dataRow["EmployeeEmail"].ToString(), dataRow["EmployeePassword"].ToString(), dataRow["EmployeeRole"].ToString()));
-                tellerWindow.Show();
-                this.Close();
-            }
+            windowOpen.setRole(dataRow["EmployeeRole"].ToString(), dataRow);
+            this.Close();
 
             conn.Close();
         }

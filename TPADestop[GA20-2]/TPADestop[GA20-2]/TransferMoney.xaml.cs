@@ -64,8 +64,8 @@ namespace TPADestop_GA20_2_
 
             MessageBox.Show("Transfer Success!");
 
-            Window qr = new QRCode(employee);
-            qr.Show();
+            TellerWindow tellerWindow = new TellerWindow(employee);
+            tellerWindow.Show();
             this.Close();
         }
     }

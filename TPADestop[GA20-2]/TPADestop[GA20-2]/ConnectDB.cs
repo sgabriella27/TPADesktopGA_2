@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using MySql.Data.MySqlClient;
 
 namespace TPADestop_GA20_2_
@@ -53,7 +54,7 @@ namespace TPADestop_GA20_2_
 
             command = new MySqlCommand(query, connection);
 
-            command.ExecuteReader();
+            command.ExecuteNonQuery();
             connection.Close();
         }
     }

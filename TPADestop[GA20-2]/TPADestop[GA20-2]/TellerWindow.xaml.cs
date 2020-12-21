@@ -55,7 +55,9 @@ namespace TPADestop_GA20_2_
 
         private void PaymentsBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Window nextWindow = new Payment();
+            nextWindow.Show();
+            this.Close();
         }
     }
 }

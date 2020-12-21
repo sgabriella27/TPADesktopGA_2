@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\!ASLAB\TPA\TPA_Desktop_GA20-2\TPADestop[GA20-2]\TPADestop[GA20-2]\App.xaml
-6-1894440204
+16-583756954
 
-15349825638
+33746632453
 137274152656
-DepositMoney.xaml;MainWindow.xaml;QRCode.xaml;TellerWindow.xaml;TransferMoney.xaml;WithdrawMoney.xaml;
+ATMDepositWindow.xaml;ATMPaymentWindow.xaml;ATMTransferWindow.xaml;ATMWindow.xaml;ATMWithdrawWindow.xaml;BlockAccountWindow.xaml;CreateAccountWindow.xaml;CustomerServiceWindow.xaml;DepositMoney.xaml;MainWindow.xaml;Payment.xaml;QRCode.xaml;QueuingMachine.xaml;TellerWindow.xaml;TransferMoney.xaml;WithdrawMoney.xaml;
 
 False
 

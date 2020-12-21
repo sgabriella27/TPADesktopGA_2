@@ -18,6 +18,8 @@ namespace TPADestop_GA20_2_.Command
         private DatePicker datePick;
         private TextBox senderTxt;
         private Window depositWindow;
+        private Window tellerWindow;
+        private Employee employee;
 
         public DepositCommand(TextBox accTxt, TextBox moneyTxt, TextBox periodTxt, DatePicker datePick, TextBox senderTxt, Window depositWindow)
         {
@@ -58,14 +60,20 @@ namespace TPADestop_GA20_2_.Command
             }
             DataTable sender = ConnectDB.getInstance().executeQuery("SELECT * FROM customer WHERE accountnumber = '" + senderTxt.Text + "' LIMIT 1");
             DataRow dt = sender.Rows[0];
-            DataTable receive = ConnectDB.getInstance().executeQuery("SELECT * FROM customer WHERE accountnumber = '" + accTxt.Text + "' AND familyCard = " + dt["familyCard"] + " LIMIT 1");
+            DataTable receive = ConnectDB.getInstance().executeQuery("SELECT * FROM customer WHERE accountnumber = '" + accTxt.Text + "' AND familyCard = '" + dt["familyCard"] + "' LIMIT 1");
 
-            ConnectDB.getInstance().executeQuery("INSERT INTO deposit VALUES ('" + accTxt.Text.ToString() + "', '" + moneyTxt.Text.ToString() + "', '" + periodTxt.Text.ToString() + "', '" + datePick.DisplayDate.ToString("yyyy-MM-dd") + "'");
+            if(receive.Rows.Count == 0)
+            {
+                MessageBox.Show("Not Family Cannot Deposit!");
+                return;
+            }
+
+            ConnectDB.getInstance().executeQuery("INSERT INTO deposit (accountNumber, moneyAmount, depositPeriod, depositDate) VALUES ('" + accTxt.Text.ToString() + "', '" + moneyTxt.Text.ToString() + "', '" + periodTxt.Text.ToString() + "', '" + datePick.DisplayDate.ToString("yyyy-MM-dd") + "')");
 
             MessageBox.Show("Deposit Success!");
 
-            //Window qr = new QRCode(employee);
-            //qr.Show();
+            tellerWindow = new TellerWindow(employee);
+            tellerWindow.Show();
             depositWindow.Close();
         }
     }

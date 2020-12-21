@@ -104,17 +104,55 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ATMDepositWindow.xaml.cs">
+      <DependentUpon>ATMDepositWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ATMPaymentWindow.xaml.cs">
+      <DependentUpon>ATMPaymentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ATMTransferWindow.xaml.cs">
+      <DependentUpon>ATMTransferWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ATMWindow.xaml.cs">
+      <DependentUpon>ATMWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ATMWithdrawWindow.xaml.cs">
+      <DependentUpon>ATMWithdrawWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BlockAccountWindow.xaml.cs">
+      <DependentUpon>BlockAccountWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Command\DepositATMCommand.cs" />
     <Compile Include="Command\DepositCommand.cs" />
+    <Compile Include="Command\PaymentATMCommand.cs" />
+    <Compile Include="Command\PaymentCommand.cs" />
+    <Compile Include="Command\WithdrawATMCommand.cs" />
     <Compile Include="Command\WithdrawCommand.cs" />
     <Compile Include="ConnectDB.cs" />
+    <Compile Include="CreateAccountWindow.xaml.cs">
+      <DependentUpon>CreateAccountWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerServiceWindow.xaml.cs">
+      <DependentUpon>CustomerServiceWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DepositMoney.xaml.cs">
       <DependentUpon>DepositMoney.xaml</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs" />
+    <Compile Include="Facade\windowOpener.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="Payment.xaml.cs">
+      <DependentUpon>Payment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="QRCode.xaml.cs">
       <DependentUpon>QRCode.xaml</DependentUpon>
     </Compile>
+    <Compile Include="queueModel.cs" />
+    <Compile Include="QueuingMachine.xaml.cs">
+      <DependentUpon>QueuingMachine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Strategy\windowStrategy.cs" />
     <Compile Include="TellerWindow.xaml.cs">
       <DependentUpon>TellerWindow.xaml</DependentUpon>
     </Compile>
@@ -124,6 +162,38 @@
     <Compile Include="WithdrawMoney.xaml.cs">
       <DependentUpon>WithdrawMoney.xaml</DependentUpon>
     </Compile>
+    <Page Include="ATMDepositWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ATMPaymentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ATMTransferWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ATMWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ATMWithdrawWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlockAccountWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateAccountWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerServiceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DepositMoney.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -140,7 +210,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Payment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="QRCode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QueuingMachine.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

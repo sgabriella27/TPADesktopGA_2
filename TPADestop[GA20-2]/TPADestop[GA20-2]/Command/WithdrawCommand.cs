@@ -15,8 +15,8 @@ namespace TPADestop_GA20_2_.Command
     {
         private TextBox accTxt;
         private TextBox moneyTxt;
-        private Employee employee;
         private Window withdrawWindow;
+        private Employee employee;
 
         public WithdrawCommand(TextBox accTxt, TextBox moneyTxt, Window withdrawWindow)
         {
@@ -58,8 +58,8 @@ namespace TPADestop_GA20_2_.Command
 
             MessageBox.Show("Withdraw Success!");
 
-            //Window qr = new QRCode(employee);
-            //qr.Show();
+            TellerWindow tellerWindow = new TellerWindow(employee);
+            tellerWindow.Show();
             withdrawWindow.Close();
         }
     }
