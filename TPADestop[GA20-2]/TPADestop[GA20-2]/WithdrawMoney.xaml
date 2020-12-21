@@ -1,0 +1,68 @@
+﻿<Window x:Class="TPADestop_GA20_2_.WithdrawMoney"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TPADestop_GA20_2_"
+        mc:Ignorable="d"
+        Title="WithdrawMoney" Height="450" Width="800">
+    <Grid Background="#FF080E38">
+        <Label Content="Account Number" FontFamily="Berlin Sans FB" Foreground="White" FontSize="25" HorizontalAlignment="Left" Height="40" Margin="295,68,0,0" VerticalAlignment="Top" Width="196"/>
+        <TextBox x:Name="accTxt" HorizontalAlignment="Left" Height="35" Margin="248,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280"/>
+        <Label Content="Money Amount" FontFamily="Berlin Sans FB" Foreground="White" FontSize="25" HorizontalAlignment="Left" Margin="308,190,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="moneyTxt" HorizontalAlignment="Left" Height="35" Margin="248,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280"/>
+        <Button x:Name="WithdrawBtn" Content="Withdraw" HorizontalAlignment="Left" Margin="324,343,0,0" VerticalAlignment="Top" Width="133" Height="48" FontSize="24" FontFamily="Berlin Sans FB" Background="#FF4BE8FF" Cursor="Hand" Click="WithdrawBtn_Click"/>
+        <Rectangle Fill="#FF8FEDFF" HorizontalAlignment="Left" Height="100" Margin="-8,51,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="39.235"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Fill="#FF8FEDFF" HorizontalAlignment="Left" Height="50" Margin="121,190,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FF8FEDFF" HorizontalAlignment="Left" Height="100" Margin="693,66,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="39.235"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Fill="#FF8FEDFF" HorizontalAlignment="Left" Height="50" Margin="630,206,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-40.35"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Fill="#FF8FEDFF" HorizontalAlignment="Left" Height="64" Margin="47,289,0,0" Stroke="Black" VerticalAlignment="Top" Width="63" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="20.839"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Fill="#FF8FEDFF" HorizontalAlignment="Left" Height="74" Margin="684,311,0,0" Stroke="Black" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-79.477"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+    </Grid>
+</Window>
